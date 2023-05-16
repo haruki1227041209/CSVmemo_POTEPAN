@@ -13,13 +13,13 @@ puts "メモしたい内容を記入してください"
 puts "完了したらCtrl + Dをおします"
 
 if memo_type == 1
-  text_type = $stdin.readlines
+  text_type = $stdin.read
   data = [text_type]
   CSV.open(file_type + ".csv",'w') do |csv|
    csv << data
   end
 elsif memo_type == 2
-  text_type = $stdin.readlines
+  text_type = $stdin.read
   data = [text_type]
   CSV.open(file_type + ".csv",'a') do |csv|
    csv << data
